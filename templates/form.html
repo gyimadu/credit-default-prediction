@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Default Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+        .container label {
+            width: 40%;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #313131;
+        }
+        input[type="submit"] {
+            background-color: #1400cc;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <h1>Credit Card Default Prediction</h1>
+        <p>Please enter details of client:</p>
+        <h3>Client Personal Info</h3>
+        <div class="container">
+            <label for="limit_bal">Credit Limit:</label>
+            <input type="text" name="limit_bal" required><br>
+        </div>
+
+        <div class="container">
+            <label for="sex">Sex (1 = Male, 2 = Female):</label>
+            <input type="text" name="sex" required><br>
+        </div>
+
+        <div class="container">
+            <label for="education">Education (1 = Graduate School, 2 = University, 3 = High School, 4 = Others):</label>
+            <input type="text" name="education" required><br>
+        </div>
+
+        <div class="container">
+            <label for="marriage">Marriage (1 = Married, 2 = Single, 3 = Others):</label>
+            <input type="text" name="marriage" required><br>
+        </div>
+
+        <div class="container">
+            <label for="age">Age:</label>
+            <input type="text" name="age" required><br>
+        </div>
+
+        <h3>Payment History</h3>
+        <!-- Add fields for PAY_2 to PAY_6 -->
+        <div class="container">
+            <label for="pay_0">Last Payment Status (PAY_0):</label>
+            <input type="text" name="pay_0" required><br>
+        </div>
+
+        <div class="container">
+            <label for="pay_2">Payment Status 2 (PAY_2):</label>
+            <input type="text" name="pay_2" required><br>
+        </div>
+
+        <div class="container">
+            <label for="pay_3">Payment Status 3 (PAY_3):</label>
+            <input type="text" name="pay_3" required><br>
+        </div>
+
+        <div class="container">
+            <label for="pay_4">Payment Status 4 (PAY_4):</label>
+            <input type="text" name="pay_4" required><br>
+        </div>
+
+        <div class="container">
+            <label for="pay_5">Payment Status 5 (PAY_5):</label>
+            <input type="text" name="pay_5" required><br>
+        </div>
+
+        <div class="container">
+            <label for="pay_6">Payment Status 6 (PAY_6):</label>
+            <input type="text" name="pay_6" required><br>
+        </div>
+
+        <!-- Add fields for BILL_AMT1 to BILL_AMT6 -->
+        <div class="container">
+            <label for="bill_amt1">Bill Amount 1:</label>
+            <input type="text" name="bill_amt1" required><br>
+        </div>
+
+        <div class="container">
+            <label for="bill_amt2">Bill Amount 2:</label>
+            <input type="text" name="bill_amt2" required><br>
+        </div>
+        
+
+        <div class="container">
+            <label for="bill_amt3">Bill Amount 3:</label>
+            <input type="text" name="bill_amt3" required><br>
+        </div>
+
+        <div class="container">
+            <label for="bill_amt4">Bill Amount 4:</label>
+            <input type="text" name="bill_amt4" required><br>
+        </div>
+
+        <div class="container">
+            <label for="bill_amt5">Bill Amount 5:</label>
+            <input type="text" name="bill_amt5" required><br>
+        </div>
+
+        <div class="container">
+            <label for="bill_amt6">Bill Amount 6:</label>
+            <input type="text" name="bill_amt6" required><br>
+        </div>
+
+        <!-- Add fields for PAY_AMT1 to PAY_AMT6 -->
+        <div class="container">
+            <label for="pay_amt1">Payment Amount 1:</label>
+            <input type="text" name="pay_amt1" required><br>
+        </div> 
+
+        <div class="container">
+            <label for="pay_amt2">Payment Amount 2:</label>
+            <input type="text" name="pay_amt2" required><br>
+        </div>
+
+        <div class="container">
+            <label for="pay_amt3">Payment Amount 3:</label>
+            <input type="text" name="pay_amt3" required><br>
+        </div>
+        
+        <div class="container">
+            <label for="pay_amt4">Payment Amount 4:</label>
+            <input type="text" name="pay_amt4" required><br>
+        </div>
+        
+
+        <div class="container">
+            <label for="pay_amt5">Payment Amount 5:</label>
+            <input type="text" name="pay_amt5" required><br>
+        </div>
+
+        <div class="container">
+            <label for="pay_amt6">Payment Amount 6:</label>
+            <input type="text" name="pay_amt6" required><br>
+        </div>
+
+        <input type="submit" value="Predict Default">
+    </form>
+</body>
+</html>
